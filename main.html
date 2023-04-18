@@ -4,10 +4,49 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+        #gameContainer {
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            margin: auto 100px;
+            position: relative ;
+        }
+        .snakeBodyPixel {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background-color: red;
+            position: absolute ;
+            z-index: 2;
+        }
+        .food {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute ;
+            /* row = 24th row
+                column = 2nd column
+            */
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
+    
+
+    <!--    
+        400 * 400 
+        
+        40*40
+        each row height = 10px;
+        each column width = 10px;
+     -->
+    <div id="gameContainer">
+        <div class="snakeBodyPixel" id="pixel2"></div>
+    </div>
+
+    <h1>Your score: <span id="score">0</span></h1>
     <script type="text/javascript" src="./script.js">
 </script>
 
