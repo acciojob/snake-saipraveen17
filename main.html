@@ -1,55 +1,41 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
-	<style>
-        #gameContainer {
-            width: 400px;
-            height: 400px;
-            background-color: black;
-            margin: auto 100px;
-            position: relative ;
-        }
-        .snakeBodyPixel {
-            width: 10px;
-            height: 10px;
-            border-radius: 2px;
-            background-color: red;
-            position: absolute ;
-            z-index: 2;
-        }
-        .food {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: green;
-            position: absolute ;
-            /* row = 24th row
-                column = 2nd column
-            */
-        }
+  <title>Snake Game</title>
+  <style>
+      #gameContainer {
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        position: relative;
+      }
+
+      .pixel {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border: 1px solid white;
+      }
+
+      .snakeBodyPixel {
+        background-color: green;
+      }
+
+      .food {
+        background-color: red;
+      }
+
+      .scoreBoard {
+        color: white;
+        text-align: center;
+      }
     </style>
 </head>
 <body>
-    
+  <div id="gameContainer"></div>
+  <div class="scoreBoard">Score: <span id="score">0</span></div>
 
-    <!--    
-        400 * 400 
-        
-        40*40
-        each row height = 10px;
-        each column width = 10px;
-     -->
-    <div id="gameContainer">
-        <div class="snakeBodyPixel" id="pixel2"></div>
-    </div>
 
-    <h1>Your score: <span id="score">0</span></h1>
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <script type="text/javascript" src="./script.js">
 </body>
-
 </html>
